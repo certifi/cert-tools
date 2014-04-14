@@ -24,3 +24,13 @@ libraries to push new releases to their relevant package managers.
 
 For obvious reasons, this can only be run by people with access to the `certifi`
 repositories.
+
+### extract-nss-root-certs
+
+This tool converts the Mozilla certificate file into a *.pem file that excludes
+all untrusted certificates. The tool is not included in this repository, as it's
+written in Go: it can be found
+[here](https://github.com/certifi/extract-nss-root-certs). Rather than building
+this code yourself, you can download a binary from
+[here](https://github.com/certifi/extract-nss-root-certs/releases). This avoids
+the need for a Go compiler.
