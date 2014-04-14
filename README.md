@@ -25,6 +25,23 @@ libraries to push new releases to their relevant package managers.
 For obvious reasons, this can only be run by people with access to the `certifi`
 repositories.
 
+### cert_tasks.py
+
+This provides a series of tasks for use with
+[invoke](http://invoke.readthedocs.org/en/latest/).  It requires that
+`extract-nss-root-certs` is somewhere on your `$PATH`. You can run three
+commands:
+
+1. `invoke -c cert_tasks generate`. This task generates a `cacerts.pem` file in
+   the local directory. This takes a single argument, `filename`, that can be
+   used to set a different filename, eg. `--filename="test.pem"`
+2. `invoke -c cert_tasks diff`. This task diffs `cacerts.pem` against the latest
+   uploaded `.pem` file, and prints whether the two are different. This takes
+   two optional arguments: `--filename`, which works as above; and `--gen`,
+   which runs the generate step before diffing.
+3. `invoke -c cert_tasks upload`. This task uploads the new `.pem` file to your
+   S3 bucket.
+
 ### extract-nss-root-certs
 
 This tool converts the Mozilla certificate file into a *.pem file that excludes
