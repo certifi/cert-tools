@@ -24,7 +24,7 @@ import tempfile
 import shutil
 
 
-repositories = ['gocertifi']
+repositories = ['python-certifi', 'gocertifi']
 
 
 class TemporaryDirectory(object):
