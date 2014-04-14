@@ -11,7 +11,7 @@ The following tools are included:
 
 ## The Tools
 
-### update-certify.py
+### $ update-certify.py
 
 This script is used to update the `certifi` libraries in their various languages
 to the newest certificates. It is run in response to a change in the certificate
@@ -25,7 +25,7 @@ libraries to push new releases to their relevant package managers.
 For obvious reasons, this can only be run by people with access to the `certifi`
 repositories.
 
-### cert_tasks.py
+### $ cert_tasks.py
 
 This provides a series of tasks for use with
 [invoke](http://invoke.readthedocs.org/en/latest/).  It requires that
@@ -42,7 +42,7 @@ commands:
 3. `invoke -c cert_tasks upload`. This task uploads the new `.pem` file to your
    S3 bucket.
 
-### extract-nss-root-certs
+### $ extract-nss-root-certs
 
 This tool converts the Mozilla certificate file into a *.pem file that excludes
 all untrusted certificates. The tool is not included in this repository, as it's
