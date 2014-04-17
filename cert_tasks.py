@@ -47,6 +47,8 @@ def upload(filename='cacerts.pem'):
     bucket = s3.get_bucket(BUCKET_NAME)
 
 
+    # Deploy the CA Bundle to production.
+
     k = Key(bucket)
 
     with open('cacerts.pem', 'rb') as f:
@@ -54,8 +56,8 @@ def upload(filename='cacerts.pem'):
 
     k.set_contents_from_filename(filename)
 
-    # TODO: setup object redirect.
 
-    k = Key(bucker)
+    # TODO: setup object redirect.
+    k = Key(bucket)
     k.key = 'latest.pem'
     k.set_contents_from_filename(filename)
