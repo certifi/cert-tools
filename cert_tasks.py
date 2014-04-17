@@ -25,9 +25,9 @@ def diff(gen=False, filename=''):
     new = hashlib.sha1(open(filename, 'rb').read()).hexdigest()
 
     if old == new:
-        print "No change."
+        print 'No change.'
     else:
-        print "Certs are different, you should upload."
+        print 'Certs are different, you should upload.'
 
 @task
 def upload(filename=''):
