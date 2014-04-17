@@ -7,7 +7,7 @@ import requests
 @task
 def generate(filename=''):
     filename = filename if filename else 'cacerts.pem'
-    run("curl https://hg.mozilla.org/mozilla-central/raw-file/tip/security/nss/lib/ckfw/builtins/certdata.txt -o certdata.txt")
+    run('curl https://hg.mozilla.org/mozilla-central/raw-file/tip/security/nss/lib/ckfw/builtins/certdata.txt -o certdata.txt')
     run("extract-nss-root-certs > '%s'" % filename)
 
 @task
