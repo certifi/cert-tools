@@ -13,7 +13,7 @@ MOZILLA_BUNDLE = 'https://hg.mozilla.org/mozilla-central/raw-file/tip/security/n
 def generate(filename='cacerts.pem'):
 
     run('curl {} -o certdata.txt'.format(MOZILLA_BUNDLE))
-    run("extract-nss-root-certs > '%s'" % filename)
+    run("./extract-nss-root-certs > '%s'" % filename)
 
 @task
 def diff(gen=False, filename='cacerts.pem'):
