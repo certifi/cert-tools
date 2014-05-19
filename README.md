@@ -25,7 +25,7 @@ libraries to push new releases to their relevant package managers.
 For obvious reasons, this can only be run by people with access to the `certifi`
 repositories.
 
-### $ cert_tasks.py
+### $ tasks.py
 
 This provides a series of tasks for use with
 [invoke](http://invoke.readthedocs.org/en/latest/).  It requires that
@@ -39,7 +39,7 @@ commands:
    uploaded `.pem` file, and prints whether the two are different. This takes
    two optional arguments: `--filename`, which works as above; and `--gen`,
    which runs the generate step before diffing.
-3. `inv upload`. This task uploads the new `.pem` file to your
+3. `inv upload`. This task uploads the new `.pem` file to the configured
    S3 bucket.
 
 ### $ extract-nss-root-certs
