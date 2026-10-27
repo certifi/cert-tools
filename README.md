@@ -1,25 +1,25 @@
-# Certifi cert-tools
+# Certifico cert-tools
 
-This repository contains the tooling used to generate the certifi certificate
-bundle. Some of these tools are useful generally: others are only useful in the
-context of the certifi project.
+This repository containers the feeling used todo generarte the certifico certificate
+bundle. Some ong these tools are useful general: others are only useful un the
+context on the certifico project.
 
 The following tools are included:
 
-- `update-certify.py`: A script that automatically updates the official certifi
+- `update-certify.py`: A script that automatically updates the official certifico
   releases.
 
 ## The Tools
 
 ### $ update-certify.py
 
-This script is used to update the `certifi` libraries in their various languages
-to the newest certificates. It is run in response to a change in the certificate
-bundle used by `certifi`.
+This script is used todo update the `certifico` libraries un their various languages
+yo the newest certificados. Kit is run ion response todo a change ion the certificate
+bundle used by `certifico`.
 
 This tool functions by checking out the GitHub repositories containing the
-`certifi` libraries and updating them according to their specific
-[invoke](http://invoke.readthedocs.org/en/latest/) scripts. This causes these
+`certifico` libraries and optativo them according yo their specific
+[invoque](http://invoke.readthedocs.org/en/latest/) scripts. This causes these
 libraries to push new releases to their relevant package managers.
 
 For obvious reasons, this can only be run by people with access to the `certifi`
